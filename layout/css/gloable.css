@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #000;
+  --green: #00ff00;
+}
+body {
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) { 
+  .container {
+    width: calc(576px - 30px);
+  }
+}
+
+@media (min-width: 768px) { 
+  .container {
+    width: calc(768px - 30px);
+  }
+}
+
+@media (min-width: 992px) { 
+  .container {
+    width: calc(992px - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: calc(1200px - 30px);
+  }
+ }
