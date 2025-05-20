@@ -109,98 +109,48 @@
 
 
 
-<section class="details">
+  <section class="details">
     <div class="container">
-      <h1>تفاصيل العقار</h1>
+      <h1>تفاصيل المنتج</h1>
       <div class="details-real">
 
         <table>
           <tr>
-            <th>نوع الخدمة</th>
+            <th>الألوان المتوفر : </th>
             <td>
             </td>
           </tr>
           <tr>
-            <th>حالة العقار</th>
+            <th> المقاسات المتوفرة :</th>
             <td>
             </td>
           </tr>
           <tr>
-            <th>المساحة</th>
-            <td>
-              cm<sup>2</sup>
-              <bdi>
-                <?php echo $fetch_real['space']; ?>
-              </bdi>
-            </td>
-          </tr>
-          <tr>
-            <th>عدد الغرف</th>
-            <td>
-            <?php echo $fetch_real['n_rooms']; ?>
-            </td>
-          </tr>
-          <tr>
-            <th>عدد المطابخ</th>
-            <td>
-            <?php echo $fetch_real['n_kitchen']; ?>
-            </td>
-          </tr>
-          <tr>
-            <th>عدد الحمامات</th>
-            <td>
-            <?php echo $fetch_real['n_baths']; ?>
-            </td>
-          </tr>
-          <tr>
-            <th>المدينة</th>
+            <th>نوعية القماش :</th>
             <td>
 
-              <a href="cities.php?id_c=<?php echo $get_id['id_city'] ?>"></a>
+            </td>
+          </tr>
 
-                <a style="color: black; font-weight: 500;"></a>
+          <tr>
+            <th>السعر :</th>
+            <td>
+            </td>
+          </tr>
 
-            </td>
-          </tr>
           <tr>
-            <th>العنوان</th>
-            <td>
-            <?php echo $fetch_real['address'] ?>
-            </td>
+            <th>
+              <button id="save">اضافة الى السلة</button>
+            </th>
+            
           </tr>
-          <tr>
-            <th>الطابق</th>
-            <td>
-            <?php echo $fetch_real['floor'] ?>
-            </td>
-          </tr>
-          <tr>
-            <th>الأثاث</th>
-            <td>
-            <?php echo $fetch_real['furnitur'] ?>
-            </td>
-          </tr>
-          <tr>
-            <th>حالة الأثاث</th>
-            <td>
-            548
-            </td>
-          </tr>
-          <tr>
-            <th>السعر</th>
-            <td>
-              512
-            </td>
-          </tr>
-          <tr>
-            <th>جولة افتراضية</th>
-            <td>متاح,
-              <a href="" target="_blank">
-                إبدأ الآن
-              </a>
-            </td>
-          </tr>
+          
         </table>
+
+        <div class="text" id="text">
+          <p>تمت الاضافة بنجاح</p>
+        </div>
+
         <div class="images-buttons">
           <button class="left-button" id="left">
             <i class='bx bx-chevrons-right' id="left_icon"></i>
@@ -219,48 +169,71 @@
   </section>
 
 
-  
+
   <footer>
     <div class="container">
-      <div class="left">
-        <img src="layout/images/SVG/logo.svg" alt="">
-        <h1>Khayal</h1>
-      </div>
-      <div class="right">
-        <div class="social"></div>
+      <div class="cont">
+        <div class="left">
+
+          <img src="layout/images/SVG/logo.svg" alt="">
+          <h1>Khayal</h1>
+
+        </div>
+        <div class="right">
+          <div class="social">
+            <h1>تواصل معنا </h1>
+            <div class="icon">
+
+              <a href="#"><i class='bx bxl-facebook-circle '> فيس بوك</i></a>
+              <a href="#"><i class='bx bxl-whatsapp'> واتس اب</i></a>
+              <a href="#"><i class='bx bxl-instagram-alt'> انستغرام </i></a>
+            </div>
+          </div>
+          <div>
+            <div class="d-web">
+              <h1>دليل الموقع </h1>
+              <div class="list-footer">
+                <a href="pages/login.html">تسجيل دخول</a>
+                <a href="./pages/book.html">حجوزاتي</a>
+                <a href="./pages/flights.html">الرحلات</a>
+                <a href="./pages/offers.html">العروض</a>
+              </div>
+
+            </div>
+          </div>
 
 
+        </div>
       </div>
     </div>
   </footer>
 
 
-
   <script>
     const slider = document.getElementById("images-slider");
-const maxwidth = slider.scrollWidth - slider.clientWidth;
-const left = document.getElementById("left");
-const right = document.getElementById("right");
-const right_icon = document.getElementById("right_icon");
-const left_icon = document.getElementById("left_icon");
-  left.addEventListener("click" , () => {
+    const maxwidth = slider.scrollWidth - slider.clientWidth;
+    const left = document.getElementById("left");
+    const right = document.getElementById("right");
+    const right_icon = document.getElementById("right_icon");
+    const left_icon = document.getElementById("left_icon");
+    left.addEventListener("click", () => {
       const scrollAmount = (slider.clientWidth + 5) * -1;
-      slider.scrollBy({left: scrollAmount , behavior: "smooth"});
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
       if (slider.scrollLeft <= 0) {
         slider.scrollTo({ left: maxwidth, behavior: "smooth" });
-      } 
-  });
-  right.addEventListener("click" , () => {
+      }
+    });
+    right.addEventListener("click", () => {
       const scrollAmount = (slider.clientWidth + 5) * 1;
-      slider.scrollBy({left: scrollAmount , behavior: "smooth"});
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
       if (slider.scrollLeft >= maxwidth - 50) {
         slider.scrollTo({ left: 0, behavior: "smooth" });
       }
-  });
-  slider.addEventListener("scroll" , () => {
-    if (slider.scrollLeft >= maxwidth - 150) {
-      right_icon.classList.remove("bx-chevron-left");
-      right_icon.classList.add("bx-chevrons-left");
+    });
+    slider.addEventListener("scroll", () => {
+      if (slider.scrollLeft >= maxwidth - 150) {
+        right_icon.classList.remove("bx-chevron-left");
+        right_icon.classList.add("bx-chevrons-left");
       } else {
         right_icon.classList.add("bx-chevron-left");
         right_icon.classList.remove("bx-chevrons-left");
@@ -272,92 +245,92 @@ const left_icon = document.getElementById("left_icon");
         left_icon.classList.remove("bx-chevrons-right");
         left_icon.classList.add("bx-chevron-left");
       }
-  })
+    })
 
 
 
-  // Start star button
+    // Start star button
 
-  var urlParams = new URLSearchParams(window.location.search);
-  var id_real = urlParams.get('id_r');
-
-
-
-  const star = document.getElementById("star");
-  const span = document.getElementById("span");
-  const window1 = document.getElementById("window");
-  const windowRegin = document.getElementById("windowRegin");
-  const firstStar = document.getElementById("firstStar");
-  const inp_hidden = document.getElementById("inp-hidden").value;
-  var i;
-  if(inp_hidden == 1) {
-    console.log("true");
-    i = 1;
-  } else if(inp_hidden == 0){
-    console.log("false");
-    i = 0;
-  }
-  star.addEventListener("click" , () => {
-    if(i==1) {
-      firstStar.style.visibility = "hidden";
-      windowRegin.style.bottom = 10+"px";
-      span.innerHTML = "حفظ";
+    var urlParams = new URLSearchParams(window.location.search);
+    var id_real = urlParams.get('id_r');
 
 
-      function salem() {
-        var myRequest = new XMLHttpRequest();
-      myRequest.onreadystatechange = function () {
-        if(this.readyState === 4 && this.status === 200) {
-          if(this.responseText == "true")
-          {
 
-            star.disabled = true;// لإيقاف عمل الزر عند اظهار الرسالة
-            setTimeout(() => {
-            star.removeAttribute("disabled");
-            windowRegin.style.bottom = -90+"px";
-            }, 2000);
-            i = 0;
-
-          }
-        }
-      };
-      myRequest.open("GET" , 'save.php?id_real='+id_real+'&s=0' , true);
-      myRequest.send();
-      }
-      salem();
-      
-      
-    } else {
-      firstStar.style.visibility = "visible";
-      window1.style.bottom = 10+"px";
-      star.disabled = true;
-      span.innerHTML = "تم الحفظ";
-      
-      function salem() {
-        var myRequest = new XMLHttpRequest();
-        myRequest.onreadystatechange = function () {
-        if(this.readyState === 4 && this.status === 200) {
-          if(this.responseText == "true")
-          {
-
-            setTimeout(() => {
-            star.removeAttribute("disabled");
-            window1.style.bottom = -90+"px";
-            }, 2000);
-            i = 1;
-
-          }
-        }
-      };
-      myRequest.open("GET" , 'save.php?id_real='+id_real+'&s=1' , true);
-      myRequest.send();
-      }
-      salem();
+    const star = document.getElementById("star");
+    const span = document.getElementById("span");
+    const window1 = document.getElementById("window");
+    const windowRegin = document.getElementById("windowRegin");
+    const firstStar = document.getElementById("firstStar");
+    const inp_hidden = document.getElementById("inp-hidden").value;
+    var i;
+    if (inp_hidden == 1) {
+      console.log("true");
+      i = 1;
+    } else if (inp_hidden == 0) {
+      console.log("false");
+      i = 0;
     }
-  })
-  // End star button
+    star.addEventListener("click", () => {
+      if (i == 1) {
+        firstStar.style.visibility = "hidden";
+        windowRegin.style.bottom = 10 + "px";
+        span.innerHTML = "حفظ";
+
+
+        function salem() {
+          var myRequest = new XMLHttpRequest();
+          myRequest.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+              if (this.responseText == "true") {
+
+                star.disabled = true;// لإيقاف عمل الزر عند اظهار الرسالة
+                setTimeout(() => {
+                  star.removeAttribute("disabled");
+                  windowRegin.style.bottom = -90 + "px";
+                }, 2000);
+                i = 0;
+
+              }
+            }
+          };
+          myRequest.open("GET", 'save.php?id_real=' + id_real + '&s=0', true);
+          myRequest.send();
+        }
+        salem();
+
+
+      } else {
+        firstStar.style.visibility = "visible";
+        window1.style.bottom = 10 + "px";
+        star.disabled = true;
+        span.innerHTML = "تم الحفظ";
+
+        function salem() {
+          var myRequest = new XMLHttpRequest();
+          myRequest.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+              if (this.responseText == "true") {
+
+                setTimeout(() => {
+                  star.removeAttribute("disabled");
+                  window1.style.bottom = -90 + "px";
+                }, 2000);
+                i = 1;
+
+              }
+            }
+          };
+          myRequest.open("GET", 'save.php?id_real=' + id_real + '&s=1', true);
+          myRequest.send();
+        }
+        salem();
+      }
+    })
+    // End star button
+
   </script>
 
+  <script src="layout/js/index.js"></script>
 
 </body>
 

@@ -138,6 +138,7 @@ main .container .text span {
 .pro-1 .container .cards {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .pro-1 .container .cards .card {
   position: relative;

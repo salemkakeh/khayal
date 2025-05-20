@@ -1,20 +1,99 @@
 footer {
   background-color: #241c18;
   width: 100wh;
-  height: 50vh;
+  margin-top: 80px;
+  padding-bottom: 80px;
 }
-footer .container {
+footer .container .cont {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  padding-top: 40px;
+  padding-top: 80px;
 }
-footer .container .left img {
-  width: 200px;
 
+footer .container .cont .left img {
+  width: 250px;
 }
-footer .container .left h1 {
+footer .container .cont .left h1 {
+  font-size: 30px;
   text-align: center;
+  margin-top: 10px;
   color: var(--tColor);
-  font-size: 40px;
+}
+
+footer .container .cont .right {
+  display: flex;
+  gap: 80px;
+}
+footer .container .cont .right h1 {
+  color: var(--yColor);
+}
+
+footer .container .cont .right .social .icon a {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+footer .container .cont .right .social .icon a:hover {
+  color: var(--yColor);
+}
+
+footer .container.cont .right .d-web {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .cont .right ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+footer .container .cont .right .list-footer a {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-bottom: 6px;
+  font-size: 20px;
+}
+footer .container .cont .right .list-footer a:hover {
+  color: var(--yColor);
+}
+
+@media (max-width: 768px) {
+  footer .container .cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 80px;
+     padding-bottom: 30px;
+  }
+
+  footer .container .cont .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  footer .container .cont .left img {
+    width: 200px;
+  }
+  footer .container .cont .left h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-top: 0;
+  }
+  footer .container .cont .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 576px) {
+  footer .container .cont .right .social h1,
+  footer .container .cont .d-web h1 {
+    font-size: 21px;
+  }
 }
