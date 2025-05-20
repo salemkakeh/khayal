@@ -1,0 +1,215 @@
+
+main {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center 0;
+  
+}
+main .container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  height: calc(100vh - 80px);
+  /* backdrop-filter: blur(10px); */
+}
+main .container .text {
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  text-shadow: 0 0 10px #2020202b;
+  color: var(--tColor);
+  line-height: clamp(4.2rem, 2vw, 4rem);
+  max-width: 600px;
+}
+
+main .container .text span {
+  color: var(--yColor);
+}
+
+@media (max-width: 792px) {
+    main {
+      background-image: url(../images/bg3.jpg);
+    }
+  main .container .text {
+    text-align: center;
+    justify-content: center;
+    font-weight: 900;
+    text-shadow: 0 3px 3px #2020207c ;
+      font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+  }
+  main .container .text span {
+  color: var(--tColor);
+}
+}
+.product {
+  height: 100vh;
+  background-color: var(--bgColor);
+}
+.product .container p {
+  text-align: center;
+  font-size: clamp(1.8rem, 1.2vw, 0.8rem);
+  line-height: clamp(4.2rem, 2vw, 4rem);
+  font-weight: 600;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  color: var(--tColor);
+  margin-top: 0;
+}
+.product .container p span {
+  color: var(--yColor);
+}
+.product .container .cards {
+  display: flex;
+  overflow-x: scroll;
+
+}
+
+.product .container .cards::-webkit-scrollbar {
+  height: 0px;
+}
+.product .container .con {
+  position: relative;
+}
+.product .container .con::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent, #241c18);
+  right: 0px;
+  top: 0;
+  z-index: 1111;
+  pointer-events: none;
+}
+
+.product .container .con::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background-image: linear-gradient(to left, transparent, #241c18);
+  left: 0px;
+  top: 0;
+  z-index: 1111;
+  pointer-events: none;
+}
+
+/* .product .container .cards::-webkit-scrollbar-thumb {
+  background-color: red;
+} 
+.product .container .cards::-webkit-scrollbar-track {
+  background-color: #00000047;
+}  */
+.product .container .cards .card img {
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .product .container .cards .card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product .container .cards .card img {
+    height: 150px;
+  }
+  .product .container .con::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+  }
+  .product .container .con::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+  }
+}
+
+.pro-1,
+.pro-2 {
+  background-color: var(--tColor);
+  padding-bottom: 40px;
+}
+.pro-1 .container h1 {
+  text-align: center;
+  padding: 80px 0;
+  font-weight: 600;
+  font-size: 40px;
+}
+.pro-1 .container .cards {
+  display: flex;
+  justify-content: space-between;
+}
+.pro-1 .container .cards .card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform .2s;
+}
+.pro-1 .container .cards .card:hover {
+  transform: scale(1.04);
+}
+.pro-1 .container .cards .card img {
+  width: 100%;
+  box-shadow: 0 6px 6px #2020202b;
+}
+.pro-1 .container .cards .card .color {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.pro-1 .container .cards .card .color span {
+  width: 20px;
+  height: 20px;
+  background-color: var(--i);
+  border-radius: 50%;
+}
+.pro-1 .container .cards .card .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+.pro-1 .container .cards .card .text > span {
+  height: 100%;
+  width: 2px;
+  background-color: var(--bgColor);
+}
+ .pro-1 .container .cards .card .text p {
+  padding: 0;
+  margin: 0;
+}
+.pro-1 .container .cards .card .text p span {
+  color: var(--bgColor);
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 1200px) {
+  .pro-1 .container .cards .card img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pro-1 .container .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .pro-1 .container .cards .card img {
+    width: 280px;
+  }
+}
+
+.pro-1 .container h1 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}

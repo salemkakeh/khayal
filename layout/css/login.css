@@ -1,0 +1,88 @@
+
+main {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center 0;
+  
+}
+main .container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  /* backdrop-filter: blur(10px); */
+}
+
+.container form {
+  color: var(--tColor);
+  display: flex;
+  flex-direction: column;
+}
+.container form h2 {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+.container form .box-input {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+.container form .box-input:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+.container form .box-input input {
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  backdrop-filter: blur(4px);
+  padding-left: 15px;
+  padding-right: 130px;
+  border-radius: 15px ;
+  color: var(--bgColor);
+  direction: ltr;
+}
+
+
+.container form .box-input label {
+  position: absolute;
+  z-index: 111;
+  background-color: #654615;
+  right:0 ;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 14px 14px  0;
+  transition: background-color .2s;
+  cursor: pointer;
+}
+.container form .box-input input:focus + label,
+.container form .box-input input:valid + label {
+  background-color: #b17b22;
+  
+}
+.container form .link a {
+  color: #b17b22;
+}
+.container form .link a:hover {
+  color: #eba12a;
+  text-decoration: underline;
+}
+.container form > input {
+  height: 38px;
+  border-radius: 14px;
+  cursor: pointer;
+  background-color: #654615;
+  color: var(--tColor);
+  border: none;
+  transition: background-color .2s;
+
+  font-weight: bolder;
+}
+.container form > input:hover {
+  background-color: #b17b22;
+
+}

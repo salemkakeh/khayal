@@ -1,0 +1,375 @@
+.details .container {
+  padding-bottom: 100px;
+}
+.container h1 {
+  font-size: 30px;
+  margin: 0;
+  margin-top: 40px;
+}
+.details-real {
+  display: flex;
+  /* flex-direction: row-reverse;  */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  padding: 40px 0 0 0;
+}
+.details-real .images {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  gap: 5px;
+  direction: ltr;
+  overflow: hidden;
+  background: var(--bgColor);
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;/**/
+
+}
+.details-real .images::-webkit-scrollbar {
+  display: none;
+}
+.details-real .images-buttons {
+  position: relative;
+  background-color: #00aaff;
+  height: 500px;
+  width: 700px;
+}
+.details-real .images img {
+  min-width: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;/**/
+}
+.details-real .images-buttons  button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 28px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px #00000083;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details-real .images-buttons > button:active {
+  background-color: rgb(104, 76, 76);
+  color: var(--tColor);
+}
+.details-real .images-buttons button.left-button {
+  left: 10px;
+}
+.details-real .images-buttons button.right-button {
+  right: 10px;
+}
+.details-real table {
+  border-spacing: 0;
+  height: 500px;
+  max-width: calc((100%));
+  min-width: 40%;
+}
+.details-real table td, th {
+  height: 10px;
+  padding: 0;
+  appearance: none;
+  text-align: start;
+  font-size: 16px;
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+.details-real table td a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.details-real table td a:hover {
+  text-decoration: underline;
+}
+
+.location h1 {
+  margin-bottom: 40px;
+}
+.location iframe {
+  width: 100%;
+  height: 450px;
+}
+
+.bottom-buttons {
+  margin: 80px 0;
+  height: 50px;
+  display: flex;
+}
+
+.bottom-buttons button {
+  padding: 10px 40px;
+  font-size: 22px;
+  background-color: transparent;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid var(--bgColor);
+  transition: transform .2s , box-shadow 1s;
+  display: inline-block;
+  cursor: pointer;
+}
+.bottom-buttons button:hover {
+  transform: scale(1.04);
+
+}
+
+.bottom-buttons button {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-buttons button:disabled {
+  cursor: no-drop;
+}
+.bottom-buttons button:disabled span i {
+  color: #ccc;
+}
+.bottom-buttons button span {
+  position: relative;
+}
+.bottom-buttons button i {
+  color: var(--bgColor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.bottom-buttons button i:first-child {
+  visibility: hidden;
+}
+.bottom-buttons button:hover i:first-child {
+  visibility: visible;
+}
+
+.bottom-buttons button i:first-child.show {
+  visibility: visible;
+}
+
+.window {
+  position: fixed;
+  z-index: 222;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 40px;
+  background-color: #7fff7f;
+  font-weight: bold;
+  transition: .6s;
+}
+
+.form-requests {
+  margin-bottom: 100px;
+  padding: 0 0;
+}
+.form-requests .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .form-requests .container .left-icon {
+  place-items: center;
+
+} */
+.form-requests .container .form-box form {
+  display: grid;
+  grid-template-columns: repeat(2 , 100%);
+  grid-template-areas:  "area1 area2"
+                        "area3 area2"
+                        "area4 area2"
+                        "area5 area5";
+  grid-template-rows: repeat(4 , 50px);
+  gap: 10px;
+                        
+}
+.form-requests .container .form-box form .inputs-box.area1 {
+  grid-area: area1;
+}
+.form-requests .container .form-box form .inputs-box.area2 {
+  grid-area: area2;
+}
+.form-requests .container .form-box form .inputs-box.area3 {
+  grid-area: area3;
+  direction: ltr;
+}
+.form-requests .container .form-box form .inputs-box.area4 {
+  grid-area: area4;
+  direction: ltr;
+}
+.form-requests .container .form-box form .area5 {
+  grid-area: area5;
+}
+
+.form-requests .container .form-box form .inputs-box {
+  position: relative;
+}
+.form-requests .container .form-box form .inputs-box input {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: 1px solid var(--bgColor);
+}
+.form-requests .container .form-box form .inputs-box label {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 1;
+  transition: .2s;
+
+}
+.form-requests .container .form-box form .inputs-box input:focus, 
+.form-requests .container .form-box form .inputs-box input:valid {
+  outline: 1px solid var(--bgColor);
+}
+.form-requests .container .form-box form .inputs-box input:focus ~ label, /* الاشارة ~ تحدد الاشقاء اللاحقين */
+.form-requests .container .form-box form .inputs-box input:valid ~ label {
+  opacity: 0;
+  transition: .2s;
+}
+#label-textarea {
+  top: 20px;
+}
+.form-requests .container .form-box form .inputs-box textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 10px;
+  border-radius: 0;
+}
+.form-requests .container .form-box form .inputs-box textarea::-webkit-scrollbar {
+  width: 3px;
+}
+.form-requests .container .form-box form .inputs-box textarea::-webkit-scrollbar-track {
+  background-color: var(--tColor);
+}
+.form-requests .container .form-box form .inputs-box textarea::-webkit-scrollbar-thumb {
+  background-color: var(--bgColor);
+  border-radius: 10px;
+  cursor: grab;
+}
+.form-requests .container .form-box form .inputs-box textarea::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+.form-requests .container .form-box form .inputs-box textarea:focus, 
+.form-requests .container .form-box form .inputs-box textarea:valid {
+  outline: 1px solid var(--bgColor);
+}
+.form-requests .container .form-box form .inputs-box textarea:focus ~ label,
+.form-requests .container .form-box form .inputs-box textarea:valid ~ label {
+  opacity: 0;
+  transition: .2s;
+}
+.form-requests .container .form-box form  > input {
+  height: 100%;
+  border-radius: 0;
+  background-color: var(--bgColor);
+  color: var(--tColor);
+  font-size: 18px;
+  cursor: pointer;
+}
+.form-requests .container .left-icon img {
+  width: 500px;
+}
+/* start responsive */
+@media (max-width: 1400px) {
+
+  .details-real  .images {
+    width: 500px;
+  }
+  .details-real .images-buttons {
+    width: 500px;
+
+  }
+  .form-requests .container .left-icon {
+    display: none;
+  }
+  .form-requests .container {
+    display: block;
+  }
+  .form-requests .container .form-box form {
+    grid-template-columns: repeat(2 , 1fr);
+
+  }
+}
+@media (max-width: 992px) {
+  .details-real {
+    /* grid-template-columns: repeat(1 , 1fr);  */
+  flex-direction: column-reverse; 
+    gap: 20px;
+  }
+  .details-real  .images {
+    width: 100%;
+    height: 400px;
+  }
+  .details-real .images-buttons {
+    height: 400px;
+    width: 100%;
+  }
+  .form-requests .container .form-box form {
+    grid-template-areas:  "area1 area1"
+                          "area3 area3"
+                          "area4 area4"
+                          "area2 area2"
+                          "area2 area2"
+                          "area5 area5";
+                          grid-template-rows: repeat(6 , 50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container > h1 {
+    text-align: center;
+  }
+  .details-real table td,th {
+    text-align: center;
+  }
+  .details-real  .images {
+    height: 300px;
+  }
+  .details-real .images-buttons {
+    height: 300px;
+
+  }
+  .details-real .images-buttons  button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .details-real .images-buttons button.right-button {
+    right: 5px;
+  }
+  .details-real .images-buttons button.left-button {
+    left: 5px;
+  }
+  
+  .bottom-buttons {
+    justify-content: center;
+  }
+  .bottom-buttons a {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-requests h2 {
+    text-align: center;
+  }
+  .window {
+    padding: 0;
+    text-align: center;
+  }
+}
+

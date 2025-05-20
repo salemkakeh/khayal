@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #986413;
+  --yColor: #c39315;
+  --bgColor: #241c18;
+  --tColor: #FcFcFc;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: calc(576px - 30px);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: calc(768px - 30px);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: calc(992px - 30px);
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: calc(1200px - 30px);
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    width: calc(1400px - 30px);
+  }
+}
