@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- normalize css file -->
+    <link rel="stylesheet" href="layout/css/normalize.css">
+
+    <!-- box icons file -->
+    <link rel="stylesheet" href="layout/icons/boxicons-master/css/boxicons.min.css">
+
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <!-- gloabel file -->
+    <link rel="stylesheet" href="layout/css/gloabel.css">
+
+    <!-- main file css -->
+
+    <link rel="stylesheet" href="layout/css/addpro.css">
+
+    <link rel="stylesheet" href="layout/css/header.css">
+
+    <link rel="stylesheet" href="layout/css/footer.css">
+
+
+    <title>Khayal</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <input type="checkbox" id="list-2" checked>
+            <label for="list-2" class="menu-button">
+                <i class='bx bx-menu'></i>
+
+            </label>
+
+            <aside>
+                <ul>
+                    <li>
+                        <a href="#" class="bg-color">
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            الصفحة الرئيسية
+                        </a>
+                    </li>
+                    <li class="act">
+                        <input type="checkbox" name="" id="c">
+
+                        <label for="c">
+                            المنتجات
+                            <i class='bx bx-chevron-left bx-rotate-90'></i>
+                        </label>
+                        <ul>
+                            <li><a href="#">الأكثر مبيعاً</a></li>
+                            <li><a href="#">البسة القفطان</a></li>
+                            <li><a href="#">الالبسة الرجالية</a></li>
+                            <li><a href="#">الالبسة النسائية</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button>
+                    تسجيل خروج
+                </button>
+
+            </aside>
+
+            <ul>
+                <li>
+                    <a href="#" class="bg-color">
+                        تسجيل الدخول
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        الصفحة الرئيسية
+                    </a>
+                </li>
+                <li class="active-nav">
+                    <a href="#">
+                        المنتجات
+                    </a>
+                    <ul>
+                        <li><a href="#">الأكثر مبيعاً</a></li>
+                        <li><a href="#">البسة القفطان</a></li>
+                        <li><a href="#">الالبسة الرجالية</a></li>
+                        <li><a href="#">الالبسة النسائية</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <a href="index.html" class="logo">
+                <img src="layout/images/SVG/logo.svg" alt="logo is hear">
+                <h2>Khayal</h2>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>اضافة منتج </h1>
+            <div class="form">
+
+                <form action="">
+                    <div class="box-input">
+                        <label for="price">
+                            السعر :
+                        </label>
+                        <input type="text" id="price">
+                    </div>
+                    
+                    <div class="box">
+                        <div class="box-input">
+                            <label for="num">
+                                عدد القياسات :
+                            </label>
+                            <input type="number" id="num" max="4" min="1">
+                        </div>
+                        
+                        <div class="box-input">
+                            <label for="size">
+                                القياس الأول :
+                            </label>
+                            <input type="text" id="size">
+                        </div>
+                    </div>
+                    
+                    <div class="box-input">
+                        <label for="type">
+                            نوع القماش :
+                        </label>
+                        <input type="text" id="type">
+                    </div>
+                    <div class="box">
+                        <div class="box-input">
+                            <label for="num-color">
+                                عدد الألوان :
+                            </label>
+                            <input type="number" id="num-color">
+                        </div>
+                        
+                        <div class="box-input">
+
+                            <input type="color" id="color">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="file">
+                        <input type="file" id="image">
+                    </div>
+                    
+                    <input type="submit" value="اضافة">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="cont">
+                <div class="left">
+
+                    <img src="layout/images/SVG/logo.svg" alt="">
+                    <h1>Khayal</h1>
+
+                </div>
+                <div class="right">
+                    <div class="social">
+                        <h1>تواصل معنا </h1>
+                        <div class="icon">
+
+                            <a href="#"><i class='bx bxl-facebook-circle '> فيس بوك</i></a>
+                            <a href="#"><i class='bx bxl-whatsapp'> واتس اب</i></a>
+                            <a href="#"><i class='bx bxl-instagram-alt'> انستغرام </i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-web">
+                            <h1>دليل الموقع </h1>
+                            <div class="list-footer">
+                                <a href="pages/login.html">تسجيل دخول</a>
+                                <a href="./pages/book.html">حجوزاتي</a>
+                                <a href="./pages/flights.html">الرحلات</a>
+                                <a href="./pages/offers.html">العروض</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

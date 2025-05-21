@@ -1,0 +1,29 @@
+section .container {
+
+}
+
+section .container .form {
+    display: flex;
+}
+section .container .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section .container .form form .box {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: flex-end;
+} 
+section .container .form form .box-input {
+    display: flex;
+    flex-direction: column;
+    
+}
+section .container .form form .box-input input {
+    height: 33px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid var(--bgColor);
+}
